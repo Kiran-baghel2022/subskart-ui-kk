@@ -35,6 +35,8 @@ import { UseritemselectComponent } from './pages/user/useritemselect/useritemsel
 import { SelecteditemsforpayComponent } from './pages/user/selecteditemsforpay/selecteditemsforpay.component';
 import { TestComponent } from './pages/adminm/test/test.component';
 import { TestnextComponent } from './pages/adminm/testnext/testnext.component';
+import { UpdateitemComponent } from './pages/adminm/updateitem/updateitem.component';
+import { UpdatevendorComponent } from './pages/adminm/updatevendor/updatevendor.component';
 
 
 
@@ -70,6 +72,8 @@ import { TestnextComponent } from './pages/adminm/testnext/testnext.component';
     SelecteditemsforpayComponent,
     TestComponent,
     TestnextComponent,
+    UpdateitemComponent,
+    UpdatevendorComponent,
   
   ],
   imports: [

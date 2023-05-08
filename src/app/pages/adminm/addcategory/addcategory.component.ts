@@ -9,10 +9,7 @@ import { CategoryService } from 'src/app/services/category-service.service';
   styleUrls: ['./addcategory.component.scss']
 })
 export class AddcategoryComponent {
-// implements OnInit {
-  //venders!: Vender[];
-  //category!:Category;
-  //category: Category = new Category();
+
   category: Category = {
     categoryId: 0,
     categoryName: '',
@@ -49,30 +46,13 @@ export class AddcategoryComponent {
       error: (e) => console.error(e)
     });
 }
+deleteEmployee(id: number){
+  this.categoryService.deleteCategory(id).subscribe( data => {
+    console.log(data);
+   // this.getEmployees();
+  })
+}
 
-// newCategory(): void {
-//   this.submitted = false;
-//   this.category = {
-//     categoryId: 0,
-//     categoryName: '',
-//     //published: false
-//   };
-// }
-//old code angular-8
-  // save() {
-  //   this.categoryService
-  //   .createCategory(this.category).subscribe(data => {
-  //     console.log(data)
-  //     this.category = new Category();
-  //     this.gotoList();
-  //   }, 
-  //   error => console.log(error));
-  // }
-
-  // onSubmit() {
-  //   this.submitted = true;
-  //   this.save();    
-  // }
 
   gotoList() {
     this.router.navigate(['/categorys']);
