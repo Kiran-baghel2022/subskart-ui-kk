@@ -261,8 +261,10 @@
                             <td>{{category.categoryId}}</td>
                             <td> {{category.categoryName}}</td>
                             <td>
-                                <button (click)="testClick(category.categoryId)" class="btn btn-primary"> Update</button>
-                                <button (click)="testClick(category.categoryId)" class="btn btn-danger" style="margin-left: 10px">
+                                <button (click)="updateCategory(category.categoryId)" class="btn btn-primary">
+                                    Update</button>
+                                <button (click)="deleteCategory(category.categoryId)" class="btn btn-danger"
+                                    style="margin-left: 10px">
                                     Delete</button>
                             </td>
                         </tr>

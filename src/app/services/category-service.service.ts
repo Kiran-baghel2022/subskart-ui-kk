@@ -5,6 +5,7 @@ import { Category } from '../models/category';
 import { Observable } from 'rxjs';
 
 const categoryUrl = 'http://localhost:8082/savecategory';
+const showUpdateCategoryUrl = 'http://localhost:8082/savecategory';
 const saveItemUrl = 'http://localhost:8082/saveitem';
 @Injectable({
   providedIn: 'root'
@@ -31,7 +32,11 @@ export class CategoryService {
   }
 
   updateCategorybyId(id: any, data: any): Observable<any> {
-    return this.http.put(`${categoryUrl}/${id}`, data);
+    return this.http.put(`${showUpdateCategoryUrl}/${id}`, data);
+  }
+
+  showCategorybyId(id: any): Observable<any> {
+    return this.http.get(`${showUpdateCategoryUrl}/${id}`);
   }
 
   deleteCategory(id: any): Observable<any> {

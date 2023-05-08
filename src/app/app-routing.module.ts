@@ -8,7 +8,6 @@ import { ItemComponent } from './pages/adminm/item/item.component';
 import { AdminComponent } from './pages/adminm/admin/admin.component';
 import { CategoryComponent } from './pages/adminm/category/category.component';
 import { AddcategoryComponent } from './pages/adminm/addcategory/addcategory.component';
-import { UpdatecategoryComponent } from './pages/updatecategory/updatecategory.component';
 import { AdditemComponent } from './pages/adminm/additem/additem.component';
 import { ItemselectionComponent } from './pages/vendor/itemselection/itemselection.component';
 import { DetailedreportComponent } from './pages/vendor/detailedreport/detailedreport.component';
@@ -27,6 +26,7 @@ import { UseritemselectComponent } from './pages/user/useritemselect/useritemsel
 import { SelecteditemsforpayComponent } from './pages/user/selecteditemsforpay/selecteditemsforpay.component';
 import { TestComponent } from './pages/adminm/test/test.component';
 import { TestnextComponent } from './pages/adminm/testnext/testnext.component';
+import { UpdatecategoryComponent } from './pages/adminm/updatecategory/updatecategory.component';
 
 
 
@@ -40,7 +40,7 @@ const routes: Routes = [
   //{ path: '**', component: LoginComponent },
 
   //{ path: 'addcategory', component: AddcategoryComponent },
-  { path: 'updatecategory', component: UpdatecategoryComponent },
+  //{ path: 'updatecategory', component: UpdatecategoryComponent },
 
 
 
@@ -53,6 +53,7 @@ const routes: Routes = [
       { path: 'item', component: ItemComponent },
       { path: 'vender', component: VenderComponent },
       { path: 'addcategory', component: AddcategoryComponent },
+      { path: 'updatecategory', component: UpdatecategoryComponent },
       { path: 'additem', component: AdditemComponent },
     ]
   },

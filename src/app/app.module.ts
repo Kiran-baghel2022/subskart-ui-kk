@@ -16,7 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 //import { AuthInterceptor } from './services/auth.interceptor';
 import { CategoryComponent } from './pages/adminm/category/category.component';
 import { AddcategoryComponent } from './pages/adminm/addcategory/addcategory.component';
-import { UpdatecategoryComponent } from './pages/updatecategory/updatecategory.component';
+
 import { AdditemComponent } from './pages/adminm/additem/additem.component';
 import { ItemselectionComponent } from './pages/vendor/itemselection/itemselection.component';
 import { ItemssummeryComponent } from './pages/vendor/itemssummery/itemssummery.component';
@@ -37,6 +37,7 @@ import { TestComponent } from './pages/adminm/test/test.component';
 import { TestnextComponent } from './pages/adminm/testnext/testnext.component';
 import { UpdateitemComponent } from './pages/adminm/updateitem/updateitem.component';
 import { UpdatevendorComponent } from './pages/adminm/updatevendor/updatevendor.component';
+import { UpdatecategoryComponent } from './pages/adminm/updatecategory/updatecategory.component';
 
 
 

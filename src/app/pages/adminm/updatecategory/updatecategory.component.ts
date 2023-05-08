@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from 'src/app/models/category';
 import { CategoryService } from 'src/app/services/category-service.service';
@@ -18,6 +18,7 @@ export class UpdatecategoryComponent implements OnInit {
     //published: false
   };
   submitted = false;
+  message!: string;
 
   constructor(private categoryService: CategoryService,
     private router: ActivatedRoute,private route: Router) { }
@@ -40,11 +41,27 @@ export class UpdatecategoryComponent implements OnInit {
   }
 
   updateCategory(): void {
-    this.categoryService.updateCategorybyId(this.categoryId, this.category).subscribe(data => {
-      this.gotoCategoryList();
-    }
-      , error => console.log(error));
+    const data = {
+      categoryId: this.category.categoryId,
+      categoryName: this.category.categoryName
+    };
+    this.categoryService.createCategory(data)
+    .subscribe({
+      next: (result) => {
+        console.log(result);
+        this.submitted = true;
+      },
+      error: (e) => console.error(e)
+    });
   }
+  // updateCategory1(categoryId:any): void {
+  //   this.message = '';
+  //   this.categoryService.getCategorybyId(this.categoryId).subscribe((data: any) => {
+  //     this.categoryObj = data;
+  //     console.log(this.categoryObj);
+  //   });
+  //   this.router.navigate(['updatecategory']);
+  // }
 
   // newCategory(): void {
   //   this.submitted = false;
